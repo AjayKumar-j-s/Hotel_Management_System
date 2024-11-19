@@ -30,8 +30,7 @@ Bookings: Stores booking information.
 
 Installation and Setup
 Clone the repository:
-git clone https://github.com/your-username/hotel-booking-management-system.git
-cd hotel-booking-management-system
+git clone https://github.com/AjayKumar-j-s/Hotel_Management_System.git
 
 Install dependencies:
 pip install -r requirements.txt
