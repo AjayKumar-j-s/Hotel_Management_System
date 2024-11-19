@@ -1,4 +1,5 @@
 Hotel Booking Management System
+
 Description
 The Hotel Booking Management System is a console-based Python application designed to manage room bookings for a hotel. It provides functionality for hotel owners to manage rooms and bookings and for customers to view and book available rooms.
 
@@ -56,10 +57,6 @@ Room Manager with Priority Queue:
 Rooms are managed using a heap-based priority queue to ensure the cheapest available room is always booked first:
 
 import heapq
-
-
-
-
 class RoomManager:
 
     def __init__(self):
@@ -73,29 +70,7 @@ class RoomManager:
         return heapq.heappop(self.available_rooms)[1] if self.available_rooms else None
 
 Database Integration:
-SQLite is used to persist room, customer, and booking data:
-
-def setup_database():
-    conn = sqlite3.connect('database.db')
-    cursor = conn.cursor()
-    cursor.execute('''CREATE TABLE IF NOT EXISTS Rooms (
-                        room_id INTEGER PRIMARY KEY, 
-                        room_type TEXT, 
-                        rate REAL, 
-                        is_available BOOLEAN)''')
-    cursor.execute('''CREATE TABLE IF NOT EXISTS Customers (
-                        customer_id INTEGER PRIMARY KEY, 
-                        name TEXT, 
-                        contact TEXT)''')
-    cursor.execute('''CREATE TABLE IF NOT EXISTS Bookings (
-                        booking_id INTEGER PRIMARY KEY, 
-                        customer_id INTEGER, 
-                        room_id INTEGER, 
-                        start_date TEXT, 
-                        end_date TEXT)''')
-    conn.commit()
-    conn.close()
-
+SQLite is used to persist room, customer, and booking data
 
 Future Enhancements
 Add authentication for owners and customers.
