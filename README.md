@@ -57,10 +57,14 @@ Rooms are managed using a heap-based priority queue to ensure the cheapest avail
 
 import heapq
 
+
+
+
 class RoomManager:
+
     def __init__(self):
         self.available_rooms = []
-
+  
     def add_room(self, room):
         if room.is_available:
             heapq.heappush(self.available_rooms, (room.rate, room))
